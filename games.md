@@ -1,4 +1,4 @@
-#My Favorite Games 
+#My Favorite Games# 
 
 ## RPG
 	* Skyrim 
@@ -10,3 +10,9 @@
 	* Devil May Cry 
 	* GOW
 	* Horizon: ZD 
+
+## Story 
+	* Kingdom Hearts 2
+	* Final Fantasy 7 
+	* Ni No Kuni 
+	* The Witcher 3 
