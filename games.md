@@ -16,3 +16,6 @@
 	* Final Fantasy 7 
 	* Ni No Kuni 
 	* The Witcher 3 
+
+
+![click here!](https://raw.githubusercontent.com/stussy446/games-repo/master/practice-pic.png)
