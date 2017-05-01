@@ -7,24 +7,24 @@ games_collection = {}
 # make a method to add games to the games_collection 
 
 def add_game(collection, game)
-  puts "Adding #{game} to #{collection}..."
   collection[game] = {}
 end
 
 def add_review(collection, game, score)
-  puts "Adding review score of #{score} for #{game} in #{collection}..."
   collection[game][:review] = score 
 end
 
 def add_release(collection, game, year)
-  puts "Adding year released to #{game} in #{collection}..."
   collection[game][:year] = year 
 end 
 
 # TEST CODE 
-add_game(games_collection, "Kingdom Hearts")
-add_review(games_collection, "Kingdom Hearts", 10)
-add_release(games_collection, "Kingdom Hearts", 2000)
+games = ["Kingdom Hearts", "Horizon", "Persona 5"]
+games.each do |game|
+  add_game(games_collection, game)
+  add_review(games_collection, game, 10)
+  add_release(games_collection, game, 2000)
+end
 puts games_collection
 
 
