@@ -28,13 +28,14 @@ end
 # Let user choose a game to insert into collection 
 # Let them add games until 'done' or until there are 5 game 
 
-count = 0
-until count == 5 
+loop do 
   puts "What game will we be adding today?"
   game_addition = gets.chomp
-  break if game_addition == 'done' 
+  break if game_addition == 'done'
+  if not add_game(games_collection, game_addition)
+    puts "Too many games! not adding #{game_addition}"
+  end
   add_game(games_collection, game_addition)
-  count +=1
   puts games_collection 
 end
 
