@@ -7,7 +7,12 @@ games_collection = {}
 # make a method to add games to the games_collection 
 
 def add_game(collection, game)
-  collection[game] = {}
+  if collection.keys.length == 5 
+    false
+  else
+    collection[game] = {}
+    true
+  end
 end
 
 def add_review(collection, game, score)
@@ -19,11 +24,15 @@ def add_release(collection, game, year)
 end 
 
 # TEST CODE 
-games = ["Kingdom Hearts", "Horizon", "Persona 5"]
+games = ["Kingdom Hearts", "Horizon", "Persona 5",]
 games.each do |game|
-  add_game(games_collection, game)
-  add_review(games_collection, game, 10)
-  add_release(games_collection, game, 2000)
+  if not add_game(games_collection, game)
+    puts "too many games! #{game} was not added"
+  else 
+    add_game(games_collection, game)
+    add_review(games_collection, game, 10)
+    add_release(games_collection, game, 2000)
+  end
 end
 puts games_collection
 
