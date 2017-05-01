@@ -24,17 +24,24 @@ def add_release(collection, game, year)
 end 
 
 # TEST CODE 
-games = ["Kingdom Hearts", "Horizon", "Persona 5",]
-games.each do |game|
-  if not add_game(games_collection, game)
-    puts "too many games! #{game} was not added"
-  else 
-    add_game(games_collection, game)
-    add_review(games_collection, game, 10)
-    add_release(games_collection, game, 2000)
-  end
+
+# UI 
+
+# Let user choose a game to insert into collection 
+# Let them add games until 'done' or until there are 5 game 
+count = 1
+until count == 5 
+  puts "What game will we be adding today?"
+  game_addition = gets.chomp
+  break if game_addition == 'done' 
+  add_game(games_collection, game_addition)
+  count +=1
+  puts games_collection 
 end
+
 puts games_collection
+
+
 
 
 
