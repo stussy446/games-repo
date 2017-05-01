@@ -39,6 +39,20 @@ until count == 5
   puts games_collection 
 end
 
+# Let user add a review and a release year to the games 
+puts "If there is a game you would like to review, state so now (or type 'done')"
+game_name = gets.chomp 
+if game_name == 'done'
+  puts "Thank you!"
+end 
+games_collection.each_key do |game|
+  if game == game_name 
+    puts "Awesome, and what score would you give #{game}?"
+    score = gets.chomp.to_i
+    games_collection[game][:review] = score 
+  end 
+end
+
 puts games_collection
 
 
